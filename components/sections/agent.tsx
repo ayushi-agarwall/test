@@ -63,19 +63,53 @@ export default function MyForm() {
     },
   })
 
-  function onSubmit(values: z.infer < typeof formSchema > ) {
+  async function onSubmit(values: z.infer<typeof formSchema>) {
     try {
-      console.log(values);
-      toast(
-        <pre className="mt-2 w-[340px] rounded-md bg-slate-950 p-4">
-          <code className="text-white">{JSON.stringify(values, null, 2)}</code>
-        </pre>
-      );
+      console.log("Submitting form with values:", values);
+  
+      const options = {
+        method: 'POST',
+        headers: {
+          Authorization: 'Bearer bn-74c95070ac914668a13024678ddc15da',
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({
+          agent_id: "4b7f3818-9523-43f6-a936-8f27c365e936",
+          recipient_phone_number: "+916301979825",
+          from_phone_number: "",
+          user_data: {
+          contact_name: values.name_8003588118,
+          models_interested: values.name_7060500734.join(", "),
+          notes: values.name_3810522664
+          }
+        })
+      };
+  
+      const response = await fetch('https://api.bolna.dev/call', options);
+
+      let result;
+      try {
+        result = await response.json();
+      } catch (jsonError) {
+        console.error("Failed to parse JSON:", jsonError);
+        toast.error("Invalid response from the server.");
+        return;
+      }
+
+      if (response.ok) {
+        console.log('API Call Success:', result);
+        toast.success("Call initiated successfully!");
+      } else {
+        console.error('API Call Error:', result);
+        toast.error(`API Error: ${result.message || 'Failed to initiate call.'}`);
+      }
+
     } catch (error) {
-      console.error("Form submission error", error);
+      console.error("Form submission error:", error);
       toast.error("Failed to submit the form. Please try again.");
     }
   }
+  
 
   return (
     <Form {...form}>
@@ -193,7 +227,7 @@ export default function MyForm() {
         </FormItem>
       )}
     />
-        <Button type="submit">Submit</Button>
+        <Button type="submit">Initiate Call</Button>
       </form>
     </Form>
   )
