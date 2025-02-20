@@ -24,13 +24,13 @@ export const metadata: Metadata = {
   openGraph: {
     images: [
       {
-        url: 'https://www.shadcn-form.com/meta.png',
+        url: '',
         width: 600,
         height: 315,
       },
     ],
     type: 'website',
-    siteName: 'Shadcn Form Builder',
+    siteName: 'Sales Agent',
   },
   twitter: {
     card: 'summary_large_image',
