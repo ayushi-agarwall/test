@@ -7,19 +7,13 @@ import HowItWorks from '@/components/sections/how-it-works'
 import FAQ from '@/components/sections/faq'
 import Testimonials from '@/components/sections/testimonials'
 import { Footer } from '@/components/footer'
+import MyForm from '@/components/sections/agent'
 
 export default function Home() {
   return (
     <main>
       <Header />
-      <HeroSection />
-      <Logos />
-      <Problem />
-      <Solution />
-      <HowItWorks />
-      <Testimonials />
-      <FAQ />
-      <Footer />
+      <MyForm />
     </main>
   )
 }

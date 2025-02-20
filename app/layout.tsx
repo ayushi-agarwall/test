@@ -19,8 +19,8 @@ const geistMono = localFont({
 })
 
 export const metadata: Metadata = {
-  title: 'Shadcn Form Builder',
-  description: 'Shadcn Form Builder',
+  title: 'Sales Agent',
+  description: 'Sales Agent',
   openGraph: {
     images: [
       {

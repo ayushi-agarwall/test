@@ -42,15 +42,8 @@ type Tabs = {
 }
 
 const tabs: Tabs[] = [
-  { name: 'Hi', href: '/readme', variant: 'smile' },
-  {
-    name: 'Roadmap',
-    href: 'https://shadcnform.featurebase.app/',
-    variant: 'arrow',
-    isNewTab: true,
-  },
-  { name: 'Components', href: '/components', variant: 'linkHover2' },
-  { name: 'Templates', href: '/templates', variant: 'linkHover2' },
+  { name: 'Sales Agent', href: '/', variant: 'linkHover2' },
+  { name: 'Scheduled Calls', href: '/', variant: 'arrow' },
 ]
 
 export default function Header() {
@@ -103,25 +96,7 @@ export default function Header() {
       <div className="hidden md:flex items-center gap-3">
         <Link href="/playground">
           <Button variant="gooeyLeft" className="g-primary rounded-full px-4">
-            Playground
-          </Button>
-        </Link>
-        <Link
-          href="https://github.com/hasanharman/form-builder"
-          target="_blank"
-        >
-          <Button variant="outline" className="rounded-full p-2">
-            <LuGithub className="text-lg" />
-          </Button>
-        </Link>
-        <Link href="https://x.com/strad3r" target="_blank">
-          <Button variant="outline" className="rounded-full p-2">
-            <FaXTwitter className="text-lg" />
-          </Button>
-        </Link>
-        <Link href="https://buymeacoffee.com/hasanharman" target="_blank">
-          <Button className="bg-yellow-400 text-black hover:text-white  rounded-full p-2">
-            <SiBuymeacoffee className="text-lg" />
+            Customise Agent
           </Button>
         </Link>
         <ThemeSwitch />
