@@ -94,7 +94,7 @@ export default function Header() {
       </nav>
 
       <div className="hidden md:flex items-center gap-3">
-        <Link href="/playground">
+        <Link href="/">
           <Button variant="gooeyLeft" className="g-primary rounded-full px-4">
             Customise Agent
           </Button>

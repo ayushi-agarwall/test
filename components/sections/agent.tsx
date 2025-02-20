@@ -89,12 +89,12 @@ export default function MyForm() {
               <FormLabel>Name</FormLabel>
               <FormControl>
                 <Input 
-                placeholder="Contact Name with title (e.g., Mr., Dr) if known"
+                placeholder="e.g., Mr. Raghav Kumar"
                 
                 type=""
                 {...field} />
               </FormControl>
-              <FormDescription>e.g., Mr. John Doe</FormDescription>
+              <FormDescription>Contact Name with title (e.g., Mr., Dr) if known</FormDescription>
               <FormMessage />
             </FormItem>
           )}
@@ -110,7 +110,7 @@ export default function MyForm() {
                   <PhoneInput
                     placeholder="e.g., +91 63019 79823"
                     {...field}
-                    defaultCountry="TR"
+                    defaultCountry="IN"
                   />
                 </FormControl>
               <FormDescription>Contact Number of the lead</FormDescription>
