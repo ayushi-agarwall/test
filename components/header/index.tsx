@@ -114,28 +114,7 @@ export default function Header() {
             <div className="mx-auto w-full max-w-sm flex flex-col gap-3">
               <DrawerFooter>
                 <div className="flex justify-end space-x-2">
-                  <Link
-                    href="https://github.com/hasanharman/form-builder"
-                    target="_blank"
-                  >
-                    <Button variant="outline" className="rounded-full p-2">
-                      <LuGithub className="text-lg" />
-                    </Button>
-                  </Link>
-
-                  <Link href="https://x.com/strad3r" target="_blank">
-                    <Button variant="outline" className="rounded-full p-2">
-                      <FaXTwitter className="text-lg" />
-                    </Button>
-                  </Link>
-                  <Link
-                    href="https://buymeacoffee.com/hasanharman"
-                    target="_blank"
-                  >
-                    <Button className="bg-yellow-400 text-black hover:text-white  rounded-full p-2">
-                      <SiBuymeacoffee className="text-lg" />
-                    </Button>
-                  </Link>
+                  
                   <ThemeSwitch />
                 </div>
 
@@ -151,9 +130,9 @@ export default function Header() {
                     </Link>
                   </DrawerClose>
                 ))}
-                <Link href="/playground">
+                <Link href="/">
                   <Button className="w-full bg-primary  px-2">
-                    Playground
+                    Customise Agent
                   </Button>
                 </Link>
                 <DrawerClose asChild>

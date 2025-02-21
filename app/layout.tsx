@@ -39,7 +39,7 @@ export const metadata: Metadata = {
     images: ['https://www.shadcn-form.com/meta.png'],
     creator: '@strad3r',
   },
-  keywords: ['form', 'builder', 'shadcn', 'react'],
+  keywords: ['form', 'sales', 'agent'],
   icons: {
     icon: '/favicon.ico',
     apple: '/apple-touch-icon.png',
